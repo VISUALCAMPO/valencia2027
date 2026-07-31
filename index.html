@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Plano Grandioso Daniel - Visualcampo & Raíces del Amor - Valencia 2027">
+<title>PLANO GRANDIOSO — Daniel | Valencia 2027</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+  :root {
+    --ink: #1a1510;
+    --parchment: #f7f3ec;
+    --gold: #c49a2e;
+    --gold-light: #e8c96a;
+    --rust: #8b3a1e;
+    --deep: #1e2d40;
+    --sage: #4a6741;
+    --line: rgba(196,154,46,0.25);
+    --white: #ffffff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NAVEGAÇÃO FIXA */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(30,45,64,0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--gold);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+  }
+
+  .nav-links a:hover {
+    color: var(--gold);
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.3s;
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  /* CAPA MELHORADA */
+  .capa {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--deep) 0%, #2a3f54 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 2rem 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .capa::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 60%, rgba(196,154,46,0.1) 0%, transparent 70%);
+  }
+
+  .capa-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+  }
+
+  .capa-epigraph {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--gold-light);
+    opacity: 0.9;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .capa-nome {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    color: var(--gold);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .capa-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: clamp(3rem, 10vw, 6rem);
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .capa-titulo span {
+    color: var(--gold);
+    display: block;
+  }
+
+  .capa-subtitulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 3rem;
+    max-width: 700px;
+    line-height: 1.5;
+  }
+
+  .capa-frankl {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 2.5rem 3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+  }
+
+  .capa-frankl blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: var(--gold-light);
+    line-height: 1.7;
+  }
+
+  .capa-frankl cite {
+    display: block;
+    margin-top: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-style: normal;
+  }
+
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.15;
+    pointer-events: none;
+  }
+  .orb-1 { width: 500px; height: 500px; background: var(--gold); top: -150px; right: -100px; animation: float 20s infinite ease-in-out; }
+  .orb-2 { width: 400px; height: 400px; background: #4a90b8; bottom: -100px; left: -100px; animation: float 25s infinite ease-in-out reverse; }
+
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -30px) scale(1.05); }
+    66% { transform: translate(-20px, 20px) scale(0.95); }
+  }
+
+  /* SEÇÕES GERAIS */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  section {
+    padding: 100px 0;
+    position: relative;
+  }
+
+  section:nth-child(even) {
+    background: var(--white);
+  }
+
+  .section-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    color: var(--deep);
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--rust);
+  }
+
+  .lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    color: var(--ink);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    max-width: 800px;
+  }
+
+  p { margin-bottom: 1.2rem; color: #4a4038; }
+
+  /* GRID SYSTEM MELHORADO */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
+  }
+
+  /* CARDS */
+  .card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(30,45,64,0.1);
+  }
+
+  .card:hover::before {
+    transform: scaleX(1);
+  }
+
+  /* CARDS URGENTES */
+  .urgente-card {
+    border: 2px solid var(--gold);
+    background: linear-gradient(135deg, var(--white) 0%, #faf8f3 100%);
+  }
+
+  .urgente-tag {
+    position: absolute;
+    top: -12px;
+    left: 2rem;
+    background: var(--gold);
+    color: var(--white);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(196,154,46,0.3);
+  }
+
+  .urgente-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--deep);
+    margin: 1rem 0;
+  }
+
+  .urgente-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .urgente-valor {
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--deep);
+    color: var(--gold);
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Cormorant Garamond', serif;
+    border-radius: 4px;
+  }
+
+  /* CARDS FINANCEIROS */
+  .fin-card {
+    background: linear-gradient(135deg, var(--deep) 0%, #2a3f54 100%);
+    color: var(--white);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .fin-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(196,154,46,0.1) 0%, transparent 70%);
+  }
+
+  .fin-valor {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+
+  .fin-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    display: block;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  .fin-desc {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    line-height: 1.6;
+    position: relative;
+  }
+
+  /* FRANKL BOX */
+  .frankl-box {
+    border-left: 4px solid var(--gold);
+    padding: 2.5rem;
+    margin: 3rem 0;
+    background: linear-gradient(135deg, rgba(196,154,46,0.05) 0%, rgba(196,154,46,0.02) 100%);
+    border-radius: 0 8px 8px 0;
+  }
+
+  .frankl-box blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+    color: var(--deep);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .frankl-box cite {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--gold);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-style: normal;
+  }
+
+  /* ELENA BOX */
+  .elena-box {
+    background: linear-gradient(135deg, #f7f3ec 0%, #fff9f0 100%);
+    border: 2px solid rgba(196,154,46,0.3);
+    padding: 3rem;
+    margin: 3rem 0;
+    position: relative;
+    border-radius: 8px;
+  }
+
+  .elena-box::before {
+    content: '♡';
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 2rem;
+    color: var(--gold);
+    opacity: 0.3;
+  }
+
+  .elena-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: var(--rust);
+    margin-bottom: 1.5rem;
+  }
+
+  /* LISTA DE TAREFAS */
+  .task-list {
+    list-style: none;
+    margin: 1.5rem 0;
+  }
+
+  .task-list li {
+    padding: 1rem 0 1rem 2.5rem;
+    position: relative;
+    font-size: 0.95rem;
+    color: #4a4038;
+    border-bottom: 1px solid rgba(196,154,46,0.1);
+    transition: background 0.2s;
+  }
+
+  .task-list li:last-child { border-bottom: none; }
+
+  .task-list li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 0.6rem;
+    top: 1.2rem;
+  }
+
+  .task-list li:hover {
+    background: rgba(196,154,46,0.03);
+    padding-left: 2.8rem;
+  }
+
+  /* TABELA DE VERIFICAÇÃO */
+  .table-container {
+    overflow-x: auto;
+    margin: 3rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  }
+
+  .check-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+  }
+
+  .check-table th {
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding: 1.2rem 1.5rem;
+    background: var(--deep);
+    color: var(--gold-light);
+  }
+
+  .check-table td {
+    padding: 1.2rem 1.5rem;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  .check-table tr:last-child td { border-bottom: none; }
+  .check-table tr:hover td { background: rgba(196,154,46,0.03); }
+
+  .badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 4px;
+  }
+
+  .badge-hoje { background: var(--rust); color: var(--white); }
+  .badge-semana { background: var(--deep); color: var(--gold-light); }
+  .badge-mes { background: var(--sage); color: var(--white); }
+  .badge-trimestre { background: rgba(196,154,46,0.2); color: var(--gold); border: 1px solid var(--gold); }
+
+  /* VALENCIA BOX */
+  .valencia-box {
+    background: linear-gradient(135deg, var(--deep) 0%, #2a3f54 100%);
+    color: var(--white);
+    padding: 4rem 3rem;
+    margin: 3rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  .valencia-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 100%, rgba(196,154,46,0.15) 0%, transparent 70%);
+  }
+
+  .valencia-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: var(--gold);
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  .valencia-box > p {
+    color: rgba(255,255,255,0.8);
+    font-size: 1.1rem;
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+
+  .valencia-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+    position: relative;
+  }
+
+  .vmeta {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(196,154,46,0.2);
+  }
+
+  .vmeta-val {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .vmeta-key {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* CODA */
+  .coda {
+    background: linear-gradient(135deg, var(--deep) 0%, #1a2530 100%);
+    color: var(--white);
+    padding: 100px 2rem;
+    text-align: center;
+  }
+
+  .coda blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: var(--gold-light);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.5;
+  }
+
+  .coda-sub {
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 3rem;
+  }
+
+  .coda-divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 3rem auto;
+  }
+
+  .coda-text {
+    color: rgba(255,255,255,0.5);
+    font-size: 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+  }
+
+  .coda-assinatura {
+    margin-top: 3rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.15em;
+  }
+
+  /* RESPONSIVIDADE */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+    
+    section {
+      padding: 60px 0;
+    }
+    
+    .container {
+      padding: 0 1.5rem;
+    }
+    
+    .grid-2, .grid-3, .grid-4 {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .card, .urgente-card, .fin-card, .elena-box {
+      padding: 2rem 1.5rem;
+    }
+    
+    .valencia-box {
+      padding: 3rem 1.5rem;
+    }
+    
+    .valencia-meta {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    
+    .check-table th,
+    .check-table td {
+      padding: 1rem;
+      font-size: 0.85rem;
+    }
+    
+    .frankl-box {
+      padding: 2rem 1.5rem;
+    }
+  }
+
+  /* ANIMAÇÕES SUAVES */
+  @media (prefers-reduced-motion: no-preference) {
+    .card, .vmeta {
+      animation: fadeInUp 0.6s ease-out;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* SCROLLBAR PERSONALIZADA */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--parchment);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--rust);
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVEGAÇÃO -->
+<nav class="nav">
+  <div class="nav-container">
+    <div class="nav-brand">DANIEL · VALENCIA 2027</div>
+    <div class="nav-links">
+      <a href="#urgente">Urgente</a>
+      <a href="#financeiro">Financeiro</a>
+      <a href="#terapeutico">Terapêutico</a>
+      <a href="#elena">Elena</a>
+      <a href="#verificacao">Verificação</a>
+      <a href="#valencia">Valencia</a>
+    </div>
+  </div>
+</nav>
+
+<!-- CAPA -->
+<div class="capa" id="inicio">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <div class="capa-content">
+    <p class="capa-epigraph">"Discretamente, pelo objetivo. Sem alarde, com atos."</p>
+    <p class="capa-nome">Daniel — Visualcampo · Raíces del Amor</p>
+    <h1 class="capa-titulo">Plano<br><span>Grandioso</span></h1>
+    <p class="capa-subtitulo">Da oficina em Ribeirão Preto às Fallas de Valencia — um plano de trabalho, sentido e amor</p>
+
+    <div class="capa-frankl">
+      <blockquote>
+        "A vida nunca deixa de ter sentido — e isso inclui o sofrimento, a luta e a morte.<br>
+        O que importa não é o que esperamos da vida, mas o que a vida espera de nós."
+      </blockquote>
+      <cite>— Viktor E. Frankl · Em Busca de Sentido</cite>
+    </div>
+  </div>
+</div>
+
+<!-- SEÇÃO 1: URGENTE -->
+<section id="urgente">
+  <div class="container">
+    <span class="section-label">Prioridade Imediata · Esta semana</span>
+    <h2 class="section-title">Os três trabalhos<br><em>urgentes</em></h2>
+
+    <p class="lead">Três oportunidades reais já na sua frente. Retorno financeiro imediato sem investimento, apenas com sua técnica, precificação clara e comunicação de alto valor.</p>
+
+    <div class="grid-3">
+      <div class="card urgente-card">
+        <span class="urgente-tag">Hoje</span>
+        <div class="urgente-title">1. Revisão de Lensômetro Manual</div>
+        <p><strong>Ação:</strong> Elaborar orçamento em 3 faixas (Econômico, Padrão, Premium com garantia estendida).</p>
+        <p><strong>CNV:</strong> "Percebo que o equipamento precisa de ajustes para garantir a precisão dos seus exames, e meu objetivo é restaurar essa confiabilidade."</p>
+        <p><strong>Posicionamento Tesla:</strong> "Não vendemos apenas reparo. Vendemos a restauração da precisão diagnóstica."</p>
+        <span class="urgente-valor">R$ 400 – R$ 1.200</span>
+      </div>
+
+      <div class="card urgente-card">
+        <span class="urgente-tag">Hoje</span>
+        <div class="urgente-title">2. Lâmpada de Fenda</div>
+        <p><strong>Ação:</strong> Diagnóstico completo do sistema óptico e de iluminação. Laudo técnico antes da intervenção.</p>
+        <p><strong>CNV:</strong> "Entendo que a iluminação inadequada pode gerar imprecisão. Quero devolver a clareza total ao seu exame."</p>
+        <p><strong>Posicionamento Tesla:</strong> "A lâmpada de fenda é o microscópio do oftalmologista. Tratá-la com excelência é honrar a visão."</p>
+        <span class="urgente-valor">R$ 500 – R$ 1.500</span>
+      </div>
+
+      <div class="card urgente-card">
+        <span class="urgente-tag">Esta semana</span>
+        <div class="urgente-title">3. Dr. Benoni — Elétrica</div>
+        <p><strong>Ação:</strong> Visita técnica diagnóstica. Mapear circuito, identificar falha e entregar laudo escrito.</p>
+        <p><strong>CNV:</strong> "Notei que a instabilidade elétrica pode impactar seus equipamentos. Minha visita visa trazer segurança."</p>
+        <p><strong>Posicionamento Tesla:</strong> "A energia deve ser tão pura quanto a tecnologia que sustenta. Ruído elétrico é ruído no diagnóstico."</p>
+        <span class="urgente-valor">R$ 350 – R$ 600</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 2: FINANCEIRO -->
+<section id="financeiro" style="background: var(--white);">
+  <div class="container">
+    <span class="section-label">Mapa Financeiro · 8 Meses</span>
+    <h2 class="section-title">Quanto, de onde<br>e <em>quando</em></h2>
+
+    <p class="lead">A viagem a Valencia em março de 2027 exige organização. Meta: <strong>R$ 14.400 em 8 meses</strong> através de R$ 1.800/mês reservados.</p>
+
+    <div class="grid-4">
+      <div class="fin-card">
+        <span class="fin-valor">R$ 3.500</span>
+        <span class="fin-label">Meta VISUALCAMPO/mês</span>
+        <p class="fin-desc">2 atendimentos técnicos + 1 contrato de manutenção preventiva</p>
+      </div>
+      <div class="fin-card">
+        <span class="fin-valor">R$ 1.800</span>
+        <span class="fin-label">Meta Raíces/mês</span>
+        <p class="fin-desc">12 sessões terapêuticas × R$ 150 (escalonável com Elena)</p>
+      </div>
+      <div class="fin-card">
+        <span class="fin-valor">R$ 1.800</span>
+        <span class="fin-label">Reserva Valencia/mês</span>
+        <p class="fin-desc">Separado automaticamente em conta específica e intocável</p>
+      </div>
+      <div class="fin-card">
+        <span class="fin-valor">R$ 14.400</span>
+        <span class="fin-label">Fundo em 8 meses</span>
+        <p class="fin-desc">Base sólida para voos + hotel + vivência em Valencia (Fallas)</p>
+      </div>
+    </div>
+
+    <div class="frankl-box">
+      <blockquote>"Não pergunte o que a vida pode te dar. Pergunte o que você pode dar à vida — e o retorno virá como consequência natural."</blockquote>
+      <cite>— Aplicação Frankl ao planejamento financeiro</cite>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 3: TERAPÊUTICO -->
+<section id="terapeutico">
+  <div class="container">
+    <span class="section-label">Seus recursos · Ativados</span>
+    <h2 class="section-title">Seu arsenal<br><em>terapêutico</em></h2>
+
+    <p class="lead">Você não está começando do zero. Cada certificação já é um serviço com valor, frequência e forma de oferta definidos.</p>
+
+    <div class="grid-3">
+      <div class="card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">✦</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 0.8rem; color: var(--deep);">Reiki Master</h3>
+        <p><strong>Valor:</strong> R$ 120–200 | <strong>Frequência:</strong> 3–4 clientes/semana</p>
+        <p><strong>Oferta:</strong> Pacote mensal de 4 sessões com desconto de fidelidade</p>
+      </div>
+
+      <div class="card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">◈</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 0.8rem; color: var(--deep);">Constelação Familiar</h3>
+        <p><strong>Valor:</strong> R$ 250–400/pessoa | <strong>Frequência:</strong> 1 evento/mês</p>
+        <p><strong>Oferta:</strong> Grupo de 8–12 pessoas (R$ 2.000–4.000 extras) com Elena</p>
+      </div>
+
+      <div class="card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">◉</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 0.8rem; color: var(--deep);">OH Cards</h3>
+        <p><strong>Valor:</strong> R$ 150–250 (individual) | R$ 900+ (grupo)</p>
+        <p><strong>Diferencial:</strong> Formação direta com o criador. Sessão específica "Cartas OH"</p>
+      </div>
+
+      <div class="card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">✿</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 0.8rem; color: var(--deep);">Reflexologia Podal</h3>
+        <p><strong>Valor:</strong> R$ 100–150 (50min) | <strong>Combinada:</strong> R$ 200+ com Reiki</p>
+        <p><strong>Oferta:</strong> Sessão integrativa diferenciada. Elena pode incorporar também</p>
+      </div>
+
+      <div class="card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">◎</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 0.8rem; color: var(--deep);">CNV</h3>
+        <p><strong>Aplicação:</strong> Fio condutor de todos os serviços</p>
+        <p><strong>Uso:</strong> Cada proposta técnica, sessão e mensagem de WhatsApp. Seu maior ativo invisível</p>
+      </div>
+
+      <div class="card">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">⟁</div>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; margin-bottom: 0.8rem; color: var(--deep);">Radiestesia</h3>
+        <p><strong>Ação:</strong> Reativar com prática semanal pessoal por 30 dias</p>
+        <p><strong>Uso:</strong> Ferramenta de discernimento e intuição clínica. Monetização virá</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 4: ELENA -->
+<section id="elena" style="background: var(--white);">
+  <div class="container">
+    <span class="section-label">Elena · O centro de tudo</span>
+    <h2 class="section-title">Cuidar de quem<br><em>cuida ao seu lado</em></h2>
+
+    <div class="elena-box">
+      <h3>Protocolo concreto de cuidado e co-criação</h3>
+      <p>Elena é sua companheira de vida e de missão. Sua saúde é parte do plano — não apenas como ato de amor, mas como co-criadora de Raíces del Amor.</p>
+
+      <ul class="task-list">
+        <li><strong>Esta semana:</strong> Identificar questões físicas prioritárias e agendar consulta médica específica. Nomear o problema para tratá-lo.</li>
+        <li><strong>Tratamento integrado:</strong> Sessões regulares de Reiki e Reflexologia para Elena — cuidado prático, íntimo e constante.</li>
+        <li><strong>Rotina de bem-estar:</strong> Definir juntos rotina semanal: movimento (caminhada), alimentação consciente e silêncio compartilhado.</li>
+        <li><strong>Co-criação:</strong> Valencia é meta de vocês dois, não só sua. Isso multiplica a força motivacional.</li>
+        <li><strong>Constelação:</strong> Realizar constelação focada na saúde de Elena com profissional de confiança.</li>
+      </ul>
+    </div>
+
+    <div class="frankl-box">
+      <blockquote>"O amor é a única maneira de apreender outro ser humano na mais profunda essência. Amar é ver o potencial do amado e ajudá-lo a realizá-lo."</blockquote>
+      <cite>— Viktor E. Frankl</cite>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 5: VERIFICAÇÃO -->
+<section id="verificacao">
+  <div class="container">
+    <span class="section-label">Verificação · Toda sexta-feira</span>
+    <h2 class="section-title">Como saber<br>que está <em>funcionando</em></h2>
+
+    <p class="lead">Use esta tabela <strong>toda sexta-feira</strong> para avaliar: estou avançando ou preciso corrigir a rota?</p>
+
+    <div class="table-container">
+      <table class="check-table">
+        <thead>
+          <tr>
+            <th>Prazo</th>
+            <th>Ação</th>
+            <th>Indicador de sucesso</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="badge badge-hoje">Hoje</span></td>
+            <td>Orçamento Lensômetro + Lâmpada de Fenda</td>
+            <td>Orçamento enviado com 3 faixas de valor</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-hoje">Hoje</span></td>
+            <td>Agendar Dr. Benoni</td>
+            <td>Data e valor confirmados</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-semana">Semana 1</span></td>
+            <td>Google Meu Negócio atualizado</td>
+            <td>Perfis completos e visíveis</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-semana">Semana 1</span></td>
+            <td>5 médicos contatados (CNV)</td>
+            <td>Mensagens enviadas, sem vender</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-semana">Semana 2</span></td>
+            <td>Protocolo Elena organizado</td>
+            <td>Consulta agendada + calendário definido</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-mes">Mês 1</span></td>
+            <td>1º depósito Fundo Valencia</td>
+            <td>R$ 1.800 transferidos</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-mes">Mês 1</span></td>
+            <td>Receita bruta mínima</td>
+            <td>R$ 2.000 (conservador) a R$ 4.000 (meta)</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-trimestre">Trimestre 1</span></td>
+            <td>Contratos preventivos</td>
+            <td>Mínimo 2 clínicas com contrato mensal</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-trimestre">Trimestre 1</span></td>
+            <td>1 Constelação realizada</td>
+            <td>Evento feito com Elena, feedbacks coletados</td>
+          </tr>
+          <tr>
+            <td><span class="badge badge-trimestre">Mês 8</span></td>
+            <td>Fundo Valencia</td>
+            <td>R$ 14.400 acumulados (meta atingida)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 6: VALENCIA -->
+<section id="valencia" style="background: var(--white);">
+  <div class="container">
+    <span class="section-label">O Destino · Março 2027</span>
+    <h2 class="section-title">Valencia<br><em>com Elena</em></h2>
+
+    <div class="valencia-box">
+      <h3>Las Fallas de Valencia<br>15 a 19 de Março de 2027</h3>
+      <p>Não é um prêmio distante. É o ponto fixo no horizonte que orienta cada ação de hoje.</p>
+
+      <div class="valencia-meta">
+        <div class="vmeta">
+          <span class="vmeta-val">19 Mar</span>
+          <span class="vmeta-key">La Cremà</span>
+        </div>
+        <div class="vmeta">
+          <span class="vmeta-val">8 meses</span>
+          <span class="vmeta-key">Meta do Fundo</span>
+        </div>
+        <div class="vmeta">
+          <span class="vmeta-val">R$ 1.800</span>
+          <span class="vmeta-key">Reserva/mês</span>
+        </div>
+        <div class="vmeta">
+          <span class="vmeta-val">2 pessoas</span>
+          <span class="vmeta-key">Daniel + Elena</span>
+        </div>
+      </div>
+
+      <p style="color: rgba(255,255,255,0.6); font-size: 0.95rem; max-width: 600px; margin: 2rem auto 0;">
+        Aquela figura de Arlequim que você viu — vocês vão estar na praça, de frente para ela, antes que seja consumida pelo fogo. Esse é o objetivo.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CODA -->
+<div class="coda">
+  <blockquote>
+    "O exemplo são seus atos."<br>
+    <em style="font-size: 0.6em; opacity: 0.7;">— Renê Mey</em>
+  </blockquote>
+
+  <p class="coda-sub">Discretamente. Pelo objetivo. Sem alarde.</p>
+
+  <div class="coda-divider"></div>
+
+  <p class="coda-text">
+    Que seja grande.<br>
+    Que seja abençoado por Deus.<br>
+    Peço humildemente a permissão de ser total.
+  </p>
+
+  <p class="coda-assinatura">DANIEL · VISUALCAMPO · RAÍCES DEL AMOR · 2025–2027</p>
+</div>
+
+</body>
+</html>
