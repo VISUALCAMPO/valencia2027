@@ -620,7 +620,7 @@
     <div class="section-label">Mapa Financeiro · Metas por fase</div>
     <h2 class="section-title">Quanto, de onde<br>e <em>quando</em></h2>
 
-    <p class="lead">A viagem a Valencia em março de 2027 exige organização de recursos. O plano abaixo é conservador, realista e matematicamente alinhado ao seu objetivo.</p>
+    <p class="lead">A viagem a Valencia em março de 2027 exige organização de recursos. O plano abaixo é conservador, realista e matematicamente alinhado ao seu objetivo de <strong>8 meses</strong> para a consolidação do fundo.</p>
 
     <div class="financeiro-grid">
       <div class="fin-card">
@@ -640,7 +640,7 @@
       </div>
       <div class="fin-card">
         <span class="fin-valor">R$ 14.400</span>
-        <span class="fin-label">Meta consolidada em 8 meses</span>
+        <span class="fin-label">Fundo consolidado em 8 meses</span>
         <p class="fin-desc">Base sólida para voos + hotel + vivência em Valencia (temporada Fallas)</p>
       </div>
     </div>
@@ -784,9 +784,9 @@
           <td>Realizado com Elena, feedbacks coletados</td>
         </tr>
         <tr>
-          <td><span class="badge badge-trimestre">Trimestre 2</span></td>
+          <td><span class="badge badge-trimestre">Mês 8</span></td>
           <td>Fundo Valencia</td>
-          <td>R$ 14.400+ acumulados (meta de 8 meses atingida)</td>
+          <td>R$ 14.400 acumulados (meta de 8 meses atingida)</td>
         </tr>
       </tbody>
     </table>
@@ -810,7 +810,7 @@
         </div>
         <div class="vmeta">
           <span class="vmeta-val">8 meses</span>
-          <span class="vmeta-key">Para a meta financeira</span>
+          <span class="vmeta-key">Meta do Fundo Valencia</span>
         </div>
         <div class="vmeta">
           <span class="vmeta-val">R$ 1.800/mês</span>
